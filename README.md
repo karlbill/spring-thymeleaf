@@ -149,8 +149,8 @@ Com todas as bibliotecas incluídas no projeto, vamos configurar os arquivos HTM
 <script th:src="@{/js/bootstrap.min.js}"></script>
 ```
 
-## Trabalhando com Layouts do Thymeleaf
-Para utilizarmos os layouts do Thymeleaf, precisamos importar estes layouts mais comumente utilizados, que são os da Ultraq:
+## Trabalhando com Layouts no Thymeleaf
+Para utilizarmos layouts no Thymeleaf, um dos mais comumente utilizados é o do projeto Ultraq:
 ```
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout>
