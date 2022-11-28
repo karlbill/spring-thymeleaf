@@ -37,6 +37,7 @@ public class HelloWorldController {
     }
 }
 ```
+> Perceba que a classe foi anotada com @Controller, nesse momento é feita a integração dessa classe com o Spring, onde cada método da classe passa a ser uma Action (método que atende a uma requisição HTTP), responsável pela integração entre os endpoints passados na URL da aplicação e suas respectivas ações (renderização de página, inserção em banco de dados etc).
 
 2. Criação da página hello.html em resources/templates:
 ```
@@ -128,6 +129,9 @@ public String newPath(Model model){
     }
 ```
 > Veja que o método addAttribute trabalha com uma Estrutura de Dados do tipo Map (chave, valor).
+
+### HttpServletRequest x Model
+O objeto Model, nesse caso, simplesmente substitui o que o método setAttribute da interface HttpServletRequest faz. Ambos trabalham com chave e valor. A diferença é que o Model está em uma camada mais alto nível (em nível de Framework Spring), enquanto o HttpServletRequest está em nível de Servlets (mais baixo nível).
 
 ## Adicionando arquivos estáticos
 Como exemplo, faremos a adição do framework **Bootstrap** à aplicação:
