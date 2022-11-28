@@ -76,11 +76,12 @@ implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
 Em seguida, adicionamos as propriedades de conexão com o Banco de Dados:
 ```
 spring.jpa.hibernate.ddl-auto=create
-spring.datasource.url=jdbc:mysql://localhost:[port]/[database_name]
+spring.datasource.url=jdbc:mysql://localhost:[port]/[database_name]?useSSL=false
 spring.datasource.username=[your_user]
 spring.datasource.password=[your_password]
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 ```
+> Utilize o driver 5.1.44 do MySQL.
 
 ## Outra forma de renderização: retornar String
 Podemos renderizar um arquivo .html, retornando o nome do arquivo como uma String na Action de um Controller. Por exemplo:
